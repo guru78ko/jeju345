@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>제주 가족여행 3박 4일</title>
+<meta name="description" content="2026년 12월 1일부터 4일까지 대구에서 출발하는 제주 가족여행 일정, 장소, 예산 정리">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+:root{
+  --ink:#111; --sub:#555; --mute:#767778; --line:#e4e5e6; --soft:#f2f3f3; --bg:#fff; --card:#fff;
+  --yellow:#fdd10a; --yellow-soft:rgba(253,209,10,.22); --blue:#287eff; --red:#f8383d; --green:#11a740;
+  --shadow:0 1px 6px rgba(0,0,0,.12);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--ink:#f3f3f3;--sub:#c4c4c4;--mute:#9a9b9c;--line:#34363a;--soft:#222427;--bg:#151617;--card:#1c1e20;--shadow:0 1px 6px rgba(0,0,0,.5);--yellow-soft:rgba(253,209,10,.18);--blue:#5b9bff;--green:#3fd06e}
+}
+:root[data-theme="dark"]{--ink:#f3f3f3;--sub:#c4c4c4;--mute:#9a9b9c;--line:#34363a;--soft:#222427;--bg:#151617;--card:#1c1e20;--shadow:0 1px 6px rgba(0,0,0,.5);--yellow-soft:rgba(253,209,10,.18);--blue:#5b9bff;--green:#3fd06e}
+*{box-sizing:border-box}
+html{font-size:14px;scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:15px;line-height:1.6}
+a{color:var(--blue);text-decoration:none} a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+@media(min-width:721px){.wrap{padding:0 24px}}
+
+header.top{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{font-weight:700;font-size:18px;display:flex;align-items:center;gap:8px}
+.brand i{width:12px;height:12px;border-radius:50%;background:var(--yellow);display:inline-block}
+.top nav{display:flex;align-items:center}
+.top nav a{color:var(--ink);font-size:14px;margin-left:16px}
+.top button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:6px;height:36px;padding:0 12px;cursor:pointer;margin-left:16px;font:inherit;font-size:13px}
+
+.hero{padding:40px 0 24px}
+.hero h1{font-size:30px;margin:12px 0 6px;line-height:1.3}
+.hero p{margin:0;color:var(--sub)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:13px;font-size:13px;background:var(--soft);color:var(--ink);white-space:nowrap}
+.chip.y{background:var(--yellow);color:#111;font-weight:600}
+.chip.est{background:transparent;border:1px dashed var(--mute);color:var(--mute)}
+.chip.ok{background:rgba(17,167,64,.14);color:var(--green)}
+.chip.warn{background:rgba(248,56,61,.12);color:var(--red)}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 4px;font-size:13px;color:var(--mute);font-weight:500}
+.card .v{font-size:20px;font-weight:700}
+.card .s{font-size:13px;color:var(--sub);margin-top:2px}
+
+section{padding:48px 0 0}
+h2{font-size:22px;margin:0 0 16px}
+
+.route{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.route div{flex:1 1 200px;border-left:4px solid var(--c);background:var(--card);border:1px solid var(--line);border-left-width:4px;border-left-color:var(--c);border-radius:10px;padding:10px 14px}
+.route b{display:block;font-size:14px}
+.route span{font-size:13px;color:var(--sub)}
+
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:16px}
+.tab{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:22px;height:44px;padding:0 16px;cursor:pointer;font:inherit;font-weight:600;display:flex;align-items:center;gap:8px}
+.tab .n{width:24px;height:24px;border-radius:50%;color:#fff;font-size:13px;display:grid;place-items:center}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.dayhead{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-bottom:6px}
+.dayhead h3{margin:0;font-size:20px}
+.daysum{color:var(--sub);margin:0 0 16px}
+.warnbox{background:var(--yellow-soft);border-radius:10px;padding:12px 16px;font-size:13px;margin:0 0 16px}
+.warnbox ul{margin:6px 0 0;padding-left:18px}
+
+.grid{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:960px){.grid{grid-template-columns:.9fr 1.1fr}}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.tl li:last-child{border-bottom:0}
+.tl .t{color:var(--mute);font-size:13px;font-variant-numeric:tabular-nums;padding-top:2px}
+.tl .w{font-weight:600}
+.tl .w a{color:inherit;border-bottom:2px solid var(--yellow)}
+.tl .d{color:var(--sub);font-size:13px}
+.tl .p{font-size:13px;margin-top:2px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tl .p b{font-variant-numeric:tabular-nums}
+
+.places{display:grid;gap:16px;align-content:start}
+.place{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}
+.place.hl{outline:3px solid var(--yellow)}
+.place img{width:100%;height:200px;object-fit:cover;display:block;background:var(--soft)}
+.place .nophoto{height:72px;display:grid;place-items:center;background:var(--soft);color:var(--mute);font-size:13px}
+.place .b{padding:14px 16px 16px}
+.place h4{margin:0 0 4px;font-size:17px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.place .desc{margin:0 0 10px;color:var(--sub);font-size:14px}
+dl.info{margin:0 0 10px;display:grid;grid-template-columns:64px 1fr;gap:4px 10px;font-size:13px}
+dl.info dt{color:var(--mute)}
+dl.info dd{margin:0}
+.place .l{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;padding-top:8px;border-top:1px solid var(--line)}
+.place .credit{font-size:12px;color:var(--mute);margin-top:8px}
+
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);font-size:14px}
+th{background:var(--soft);font-weight:600;font-size:13px;color:var(--sub)}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{background:var(--yellow-soft);font-weight:700;border-bottom:0}
+.tblwrap{overflow-x:auto}
+.two{display:grid;gap:20px}
+@media(min-width:900px){.two{grid-template-columns:1.3fr 1fr}}
+.note{background:var(--yellow-soft);border-radius:10px;padding:12px 16px;font-size:13px;margin-bottom:12px}
+.note.soft{background:var(--soft)}
+.check{list-style:none;margin:0;padding:0;background:var(--card);border:1px solid var(--line);border-radius:10px}
+.check li{border-bottom:1px solid var(--line)}
+.check li:last-child{border-bottom:0}
+.check label{display:flex;gap:12px;align-items:center;min-height:48px;padding:6px 16px;cursor:pointer}
+.check input{width:20px;height:20px;accent-color:var(--blue)}
+.check input:checked+span{text-decoration:line-through;color:var(--mute)}
+ul.open{margin:8px 0 0;padding-left:18px;color:var(--sub);font-size:14px}
+ul.open li{padding:3px 0}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.tips .card{box-shadow:none}
+.tips .card b{display:block;margin-bottom:4px}
+.tips .card p{margin:0;font-size:13px;color:var(--sub)}
+
+footer{margin-top:56px;padding:24px 0 56px;border-top:1px solid var(--line);color:var(--mute);font-size:13px}
+footer p{margin:0 0 6px}
+
+@media(max-width:720px){
+  .cards{grid-template-columns:1fr}
+  .hero h1{font-size:25px}
+  .tl li{grid-template-columns:70px 1fr}
+  .top nav a{display:none}
+  .top button{margin-left:0}
+  section{padding-top:36px}
+  .place img{height:180px}
+}
+@media print{
+  header.top,.tabs,.top button{display:none}
+  .place,.card{box-shadow:none;break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand"><i></i>제주 여행을 가볍게</div>
+  <nav><a href="#schedule">일정</a><a href="#budget">예산</a><a href="#todo">예약</a><a href="#tips">12월 팁</a><button id="theme" type="button" aria-label="화면 테마 전환">테마</button></nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <span class="chip y">2026.12.01(화) – 12.04(금)</span>
+    <h1>제주 가족여행 3박 4일</h1>
+    <p>대구에서 출발해 중문 호텔에 머물며 관광지와 맛집을 돌아보는 코스입니다.</p>
+    <div class="chips">
+      <span class="chip">가족 4명 (부모님 2 + 아이 9·10세)</span>
+      <span class="chip">대구공항 왕복</span>
+      <span class="chip">중문 호텔 3박</span>
+      <span class="chip">렌트카</span>
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="card"><h3>목표 예산</h3><div class="v">약 200만원</div><div class="s">현재 추정 188 ~ 262만원</div></div>
+    <div class="card"><h3>항공</h3><div class="v">12/1 오전 → 12/4 오후</div><div class="s">대구 ↔ 제주 왕복</div></div>
+    <div class="card"><h3>숙박 · 이동</h3><div class="v">중문 호텔 · 렌트카</div><div class="s">부스터 시트 옵션 확인</div></div>
+  </div>
+
+  <section id="schedule">
+    <h2>일자별 일정</h2>
+    <div class="route" id="route"></div>
+    <div class="tabs" role="tablist" aria-label="일차 선택" id="tabs"></div>
+    <div id="day" role="tabpanel"></div>
+  </section>
+
+  <section id="budget">
+    <h2>예산</h2>
+    <div class="two">
+      <div class="tblwrap"><table id="btable"></table></div>
+      <div>
+        <div class="note"><b>200만원에 맞추려면</b><br>호텔·항공을 낮은 범위로 잡고, 3일차 아쿠아플라넷을 카멜리아힐·휴애리 같은 더 저렴한 곳으로 바꾸거나 식비를 줄여야 합니다. 조식 포함 호텔이면 약 3~4만원 절감됩니다 <span class="chip est">추정</span></div>
+        <div class="note soft"><b>호텔 추가 인원 요금</b> <span class="chip ok">확인</span><br>중문 호텔은 기준 인원을 넘으면 만 7세 이상 1인 1박 약 2.0~2.4만원이 붙습니다. 4인 객실로 예약하면 이 비용을 피할 수 있습니다.</div>
+        <div class="note soft"><b>범례</b><br><span class="chip ok">확인</span> 검색으로 확인한 값(2차 자료) &nbsp; <span class="chip est">추정</span> 확인하지 못한 추정치</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="todo">
+    <h2>예약 체크리스트</h2>
+    <div class="two">
+      <ul class="check" id="check"></ul>
+      <div class="card">
+        <h3>아직 확인하지 못한 항목</h3>
+        <ul class="open">
+          <li>12월 중문 호텔 객실 요금</li>
+          <li>12/1·12/4 실제 대구-제주 항공 요금</li>
+          <li>아쿠아플라넷 어린이·성인 요금 (연령 구분 없는 상품가는 1인 약 2.7~2.8만원)</li>
+          <li>성산 해산물 점심 식당 (후보만 있고 미확정)</li>
+          <li>식당별 메뉴 가격과 12월 영업시간</li>
+          <li>여미지식물원·테디베어뮤지엄 입장료 (출처마다 다름)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="tips">
+    <h2>12월 제주 유의사항</h2>
+    <div class="tips">
+      <div class="card"><b>일몰이 빨라요</b><p>해가 17:30경 집니다. 야외 명소는 오후 4시 전에 마무리하세요.</p></div>
+      <div class="card"><b>바람과 추위</b><p>해안은 체감온도가 낮습니다. 방풍 외투와 장갑을 챙기세요.</p></div>
+      <div class="card"><b>날씨가 나쁘면</b><p>여미지식물원, 테디베어뮤지엄, 아쿠아플라넷 같은 실내 코스로 바꿉니다.</p></div>
+      <div class="card"><b>휴무일 확인</b><p>자매국수 수요일, 백기해녀의집 수요일 휴무로 안내됩니다. 성산일출봉은 매달 첫째 주 월요일 휴무(12/7)라 이번 일정과는 겹치지 않습니다.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <p>영업시간과 요금은 공식 사이트가 아닌 검색 결과(2차 자료) 기준이므로 예약 전에 꼭 확인하세요.</p>
+  <p>사진은 대부분 Wikimedia Commons에서 받았으며 출처와 라이선스는 각 장소 카드와 Research 폴더의 md 파일에 있습니다. 1일차 식당 사진 3장은 라이선스를 확인하지 못했고, 테디베어뮤지엄 사진은 서울점일 수 있습니다. 개인 여행 계획용으로만 사용하세요.</p>
+</div></footer>
+
+<script>
+var PLACES = {
+ olle:{name:"올래국수 (연동 본점)",img:"olle1.jpg",
+  desc:"고기국수 한 가지만 파는 제주 고기국수 3대장 중 한 곳. 맵지 않아 아이들도 먹기 좋고 회전이 빠릅니다.",
+  info:[["주소","제주시 귀아랑길 24 (연동)"],["시간","08:00~15:00 안팎, 일요일 휴무 표기 (출처마다 다름)"],["가격","고기국수 약 10,000원 (현재가 미확인)"],["팁","점심 피크(11:30~13:00)는 대기가 길고, 주차는 인근 유료주차장. 야외 대기가 추우니 외투 필수"]],
+  links:[["후기","https://www.trvlogue.com/ko/ollae-guksu-jeju-review"],["정보","https://polle.com/place/20EXVX/%EC%98%AC%EB%9E%98%EA%B5%AD%EC%88%98"]],q:"올래국수 연동",credit:"사진: 뽈레 사용자 게시물 (라이선스 미확인)"},
+ woojin:{name:"우진해장국",img:"woojin1.jpg",
+  desc:"고사리육개장과 몸국으로 유명한 제주시 향토 음식점. 웨이팅이 긴 편입니다.",
+  info:[["주소","제주시 서사로 11"],["시간","미확인"],["가격","고사리육개장 약 10,000~11,000원 (현재가 미확인)"],["팁","예약을 받지 않고 포장은 가능. 얼큰한 국물이라 아이들은 순한 메뉴를 확인하세요"]],
+  links:[["정보","https://polle.com/place/2HZShM/%EC%9A%B0%EC%A7%84%ED%95%B4%EC%9E%A5%EA%B5%AD"]],q:"우진해장국 서사로",credit:"사진: 뽈레 사용자 게시물 (라이선스 미확인)"},
+ hyeop:{name:"협재해수욕장",img:"hyeopjae1.jpg",
+  desc:"에메랄드빛 바다와 하얀 모래, 멀리 비양도가 보이는 서쪽 대표 해변. 12월은 물놀이 대신 산책과 사진 위주입니다.",
+  info:[["위치","제주시 한림읍 협재리 일대"],["요금","무료"],["소요","1~1.5시간"],["팁","수온이 낮고 바람이 강합니다. 일몰은 17:30경"]],
+  links:[["사진 출처","https://commons.wikimedia.org/wiki/File:Hyeopjae_Beach.jpg"]],q:"협재해수욕장",credit:"사진: Wikimedia Commons (CC BY-SA 3.0)"},
+ osul:{name:"오설록 티뮤지엄",img:"osulloc1.jpg",
+  desc:"넓은 차밭과 녹차 디저트를 즐기는 곳. 실내에서 쉬어 가기 좋고 입장은 무료입니다.",
+  info:[["주소","서귀포시 안덕면 신화역사로 15"],["시간","동절기 09:00~18:00 안팎 (12월 정확한 시간 미확인)"],["요금","입장 무료, 체험은 별도 · 주차 무료"],["팁","녹차 아이스크림이 인기. 야외 차밭은 바람이 찹니다"]],
+  links:[["사진 출처","https://commons.wikimedia.org/wiki/File:Osulloc_Tea_Museum_%26_Fields,_Jeju.jpg"]],q:"오설록 티뮤지엄",credit:"사진: Wikimedia Commons (CC BY-SA 2.0)"},
+ donsa:{name:"돈사돈",img:"donsadon1.jpg",
+  desc:"제주시 우평로의 흑돼지 근고기 전문점. 고기 상태가 좋다는 평이지만 가격대가 높고 환기가 약합니다.",
+  info:[["주소","제주시 우평로 19 (본점) · 별관 광평동로 15"],["시간","미확인"],["가격","흑돼지 2인 600g 약 66,000원, 김치찌개 9,000원 (2025 블로그 사례)"],["팁","제주시라 1일차 서쪽→중문 동선과 맞지 않습니다. 중문 인근 흑돼지집으로 대체를 권장"]],
+  links:[["정보","https://polle.com/place/2HZShM/%EB%8F%88%EC%82%AC%EB%8F%88"]],q:"돈사돈 제주",credit:"사진: 뽈레 본관 페이지 (라이선스 미확인, 본점과 같은 지점인지 불확실)"},
+ yeo:{name:"여미지식물원",img:"yeomiji_1.jpg",
+  desc:"중문관광단지 안의 대형 유리 온실 식물원. 겨울에도 실내에서 열대·아열대 식물을 볼 수 있어 아침 코스로 좋습니다.",
+  info:[["주소","서귀포시 중문관광로 93"],["시간","09:00~18:00, 매표마감 17:30, 연중무휴"],["요금","출처마다 다름: 성인 9,000~12,000원 / 어린이 5,000~7,000원 (미확인)"],["팁","1~1.5시간이면 충분. 야외 정원은 바람이 차니 외투 필수"]],
+  links:[["요금 정리","https://gusle.kr/%EC%A0%9C%EC%A3%BC-%EC%84%9C%EA%B7%80%ED%8F%AC-%EC%97%AC%EB%AF%B8%EC%A7%80%EC%8B%9D%EB%AC%BC%EC%9B%90-%EC%9E%85%EC%9E%A5%EB%A3%8C-%ED%95%A0%EC%9D%B8-%EC%98%88%EC%95%BD-%EC%B4%9D%EC%A0%95%EB%A6%AC-2026/"],["Trazy","https://www.trazy.com/ko/spot/545/yeomiji-botanical-garden-%EC%97%AC%EB%AF%B8%EC%A7%80-%EC%8B%9D%EB%AC%BC%EC%9B%90"]],q:"여미지식물원",credit:"사진: Wikimedia Commons, WSTAY.com (CC BY 3.0)"},
+ jusang:{name:"중문·대포 주상절리대",img:"jusang_1.jpg",
+  desc:"바닷가 절벽에 육각 기둥 모양의 암석이 이어진 해안 명소. 짧은 산책 코스입니다.",
+  info:[["위치","서귀포시 중문관광단지 해안 (도로명 주소 미확인)"],["시간","09:00~17:30 (11~2월 08:00~18:00로 표기한 곳도 있음)"],["요금","일반 2,000원, 어린이·청소년 1,000원 · 주차 2,000원 (2차 자료)"],["팁","파도가 강한 날은 전망대에서만 구경하세요. 문의 064-738-1521"]],
+  links:[["비짓제주","https://www.visitjeju.net/u/5qq"],["Triple","https://triple.global/pois/e500c047-5115-4194-8905-6536063239b3?lang=en"]],q:"중문 대포 주상절리대",credit:"사진: Wikimedia Commons, Bernard Gagnon (CC0)"},
+ teddy:{name:"테디베어뮤지엄",img:"teddy_1.jpg",
+  desc:"다양한 테디베어 전시와 포토존이 있는 실내 박물관. 비 오는 날 대안으로도 좋습니다.",
+  info:[["주소","서귀포시 중문관광로110번길 31"],["시간","09:00~18:00, 입장마감 17:30, 연중무휴"],["요금","성인 12,000원 / 어린이 10,000원(한 출처), 정가 10,000원·예매가 8,000원(다른 출처) · 36개월 이하 무료 · 주차 무료"],["팁","예매 할인을 확인하세요. 문의 064-738-7600"]],
+  links:[["야놀자 티켓","https://nol.yanolja.com/ticket/products/Y4001278"],["정보","https://www.ktriptips.com/kor/culture/130317"]],q:"테디베어뮤지엄 제주",credit:"사진: Wikimedia Commons, Gaubongmall (CC BY-SA 4.0). 서울점일 수 있어 참고용"},
+ chun:{name:"천지연폭포",img:"cheonjiyeon_1.jpg",
+  desc:"서귀포 시내 가까이에 있는 폭포. 산책로가 짧아 아이들과 가볍게 다녀오기 좋습니다.",
+  info:[["위치","서귀포 시내 (정확한 주소 미확인)"],["시간","출처마다 다름: 09:00~22:00 또는 09:00~17:50 (미확인)"],["요금","성인 2,000원, 청소년·어린이 1,000원 (일부 2,500원 표기) · 주차 무료라는 설명 있음"],["팁","일몰(17:30) 전에 방문하고, 산책로가 미끄러울 수 있습니다"]],
+  links:[["Trazy","https://www.trazy.com/ko/spot/686/cheonjiyeon-falls-%EC%B2%9C%EC%A7%80%EC%97%B0-%ED%8F%AD%ED%8F%AC"]],q:"천지연폭포",credit:"사진: Wikimedia Commons, Yhnn0065 (CC BY-SA 3.0)"},
+ maeil:{name:"서귀포 매일올레시장",img:"olle_1.jpg",
+  desc:"서귀포의 대표 재래시장. 저녁 먹거리를 고르고 갈치조림 식당을 찾기 좋습니다.",
+  info:[["주소","서귀포시 중앙로62번길 18"],["시간","동절기 07:00~20:00, 연중무휴 (점포별 상이)"],["요금","시장 무료 · 주차는 자료마다 달라 미확인"],["팁","동절기 20시 마감이라 18시 이전 도착을 권장"]],
+  links:[["정보","https://www.ktriptips.com/kor/shopping/1013258"],["영문 가이드","https://seoulsearching.net/jeju-seogwipo-maeil-olle-market-everything-you-need-to-know/"]],q:"서귀포 매일올레시장",credit:"사진: Wikimedia Commons, Seefooddiet (CC BY-SA 4.0)"},
+ seong:{name:"성산일출봉",img:"seongsan_1.jpg",
+  desc:"바다에서 솟은 분화구 형태의 유네스코 세계유산. 정상까지 왕복 약 1시간, 계단이 많으니 아이들 체력을 확인하세요.",
+  info:[["위치","서귀포시 성산읍 일출로 (번지 미확인)"],["시간","11~12월 06:00~18:00, 매표마감 17:00"],["요금","성인 5,000원 / 어린이 2,500원 · 6세 이하 무료 → 4인 약 15,000원"],["휴무","매달 첫째 주 월요일 (12월은 12/7)"]],
+  links:[["사진 출처","https://commons.wikimedia.org/wiki/File:Seongsan_Ilchulbong_01.jpg"]],q:"성산일출봉",credit:"사진: Wikimedia Commons, Bernard Gagnon (CC0)"},
+ aqua:{name:"아쿠아플라넷 제주",img:"aqua_1.jpg",
+  desc:"국내 최대급 수족관. 실내라 겨울과 악천후에 좋은 코스입니다.",
+  info:[["요금","어린이·성인 요금 미확인. 연령 구분 없는 상품가 약 27,200~28,200원 (36개월 미만 무료)"],["시간","09:30 또는 10:30 ~ 18:00 (출처마다 다름), 입장마감 17:30"],["문의","1833-7001"],["팁","사전 예매 할인을 확인하세요. 예산이 빠듯하면 첫 번째 제외 후보"]],
+  links:[["공식 사이트(미확인)","https://aquaplanet.co.kr/jeju"]],q:"아쿠아플라넷 제주",credit:"사진: Wikimedia Commons, 멍한오리 (CC BY-SA 3.0)"},
+ seop:{name:"섭지코지",img:"seopji_1.jpg",
+  desc:"해안 산책로와 등대, 푸른 바다가 어우러진 곶. 일몰 전에 가볍게 걷고 마무리합니다.",
+  info:[["주소","서귀포시 성산읍 섭지코지로 107"],["시간","상시 개방"],["요금","입장 무료 · 주차는 유료 (소형 30분 이내 1,000원 등, 미확정)"],["문의","064-782-2810"]],
+  links:[["사진 출처","https://commons.wikimedia.org/wiki/File:Seopjikoji-ro,_Seongsan-eup,_Seogwipo-si,_Jeju-do,_South_Korea_-_panoramio_-_song_songroov.jpg"]],q:"섭지코지",credit:"사진: Wikimedia Commons, song songroov (CC BY 3.0)"},
+ seaf:{name:"성산 해산물 점심 (후보 미확정)",img:"",
+  desc:"평판이 확인되는 식당을 찾지 못했습니다. 아래 두 곳은 이름이 언급된 후보일 뿐 검증하지 못했습니다.",
+  info:[["후보 1","백기해녀의집: 성산읍 일출로 88-19, 08:30~16:00, 수요일 휴무, 성게미역국·성게칼국수, 064-782-0673"],["후보 2","성산바다풍경: 전복뚝배기 약 16,000원이라는 후기 1건 (원문 미확인)"],["팁","12/3은 목요일이라 수요일 휴무와 겹치지 않습니다. 방문 전 지도 후기를 확인하세요"]],
+  links:[["백기해녀의집 정보","https://www.ktriptips.com/kor/food/1984236"]],q:"성산일출봉 해산물 맛집",credit:""},
+ dong:{name:"동문시장",img:"dongmun1.jpg",
+  desc:"제주시의 대표 재래시장. 감귤 초콜릿 같은 기념품과 먹거리를 한 번에 고를 수 있고 공항과 가깝습니다.",
+  info:[["주소","제주시 관덕로14길 20"],["시간","08:00~21:00 안팎, 연중무휴 (점포별 상이)"],["거리","제주공항까지 차로 약 10분 (추정)"],["팁","오전 일찍이 덜 붐빕니다. 감귤·수산물은 비행기 반입과 포장 방법을 확인하세요"]],
+  links:[["사진 출처","https://commons.wikimedia.org/wiki/File:Jeju_Dongmun_Traditional_Market_08.jpg"]],q:"동문시장 제주",credit:"사진: Wikimedia Commons (파일 페이지에서 라이선스 확인)"},
+ jamae:{name:"자매국수",img:"",
+  desc:"제주시 항골남길의 고기국수집. 사진을 확보하지 못해 지도 링크만 제공합니다.",
+  info:[["주소","제주시 항골남길 46"],["시간","09:00~18:00, 브레이크 14:30~16:10, 수요일 휴무 (출처마다 상이, 방문 전 전화 확인)"],["팁","12/4는 금요일이라 휴무와 겹치지 않습니다. 올래국수·우진해장국도 대안입니다"]],
+  links:[],q:"자매국수 제주",credit:""},
+ dodu:{name:"도두봉 무지개해안도로",img:"dodubong_summit.jpg",
+  desc:"공항과 가까운 해안 산책길과 작은 오름. 짧게 걷고 사진을 찍기 좋습니다. 사진은 도두봉 정상 전망이며 무지개해안도로 사진은 확보하지 못했습니다.",
+  info:[["주소","제주시 도두일동 1734"],["시간","24시간 개방 · 입장·주차 무료"],["거리","제주공항까지 차로 약 10분"],["팁","강풍과 추위, 화장실이 없다고 안내됩니다. 오름을 오른다면 운동화"]],
+  links:[],q:"도두봉 무지개해안도로",credit:"사진: Wikimedia Commons (CC BY-SA 4.0)"}
+};
+
+var DAYS = [
+ {n:1,color:"#287eff",date:"12/1(화)",title:"도착 + 서쪽 드라이브",tag:"도착",
+  route:"공항 → 협재 → 중문",
+  sum:"오전에 제주에 도착해 렌트카를 받고 서쪽 해안을 돌아 중문 호텔로 이동합니다. 첫날은 무리하지 않습니다.",
+  cost:"약 17~22만원 (항공·렌트카·숙박 제외)",
+  warn:["돈사돈은 제주시라 협재→중문 동선과 맞지 않습니다. 저녁은 호텔 근처 흑돼지집을 추천합니다."],
+  tl:[
+   ["오전","대구공항 → 제주공항","오전 항공편","",""],
+   ["10:30~11:30","렌트카 픽업","부스터 시트를 요청하세요","",""],
+   ["11:30~12:30","점심: 올래국수 또는 우진해장국","올래국수는 고기국수 단일 메뉴, 우진해장국은 고사리육개장 (웨이팅 김)","4인 약 4~5만원|e","olle"],
+   ["13:30~15:00","협재해수욕장 산책","겨울 바다, 바람 대비","무료","hyeop"],
+   ["15:00~16:30","오설록 티뮤지엄","녹차 아이스크림, 실내 휴식","약 2~3만원|e","osul"],
+   ["17:00~17:30","중문 호텔 체크인","이동 약 50분","",""],
+   ["18:30~20:00","저녁: 흑돼지 (중문 인근 권장)","돈사돈은 제주시에 있어 동선이 맞지 않음","4인 약 10~14만원|e","donsa"]
+  ],
+  places:["olle","woojin","hyeop","osul","donsa"]},
+ {n:2,color:"#11a740",date:"12/2(수)",title:"중문관광단지 + 서귀포",tag:"중문",
+  route:"중문 → 서귀포",
+  sum:"호텔 기준 모든 장소가 차로 10~25분 이내라 이동 부담이 적은 날입니다.",
+  cost:"약 25~30만원",
+  warn:["여미지식물원과 테디베어뮤지엄 입장료는 출처마다 달라 예매 전에 다시 확인하세요.","천지연폭포 운영시간이 출처마다 달라(17:50 또는 22:00) 일몰 전에 가는 것으로 계획했습니다."],
+  tl:[
+   ["08:00~09:00","호텔 조식","조식 포함 여부 확인","",""],
+   ["09:30~11:30","여미지식물원","실내 온실, 연중무휴","4인 약 3.2~3.4만원|e","yeo"],
+   ["11:30~12:30","중문·대포 주상절리대","짧은 산책 코스","입장 약 6천원 + 주차 2천원|o","jusang"],
+   ["12:30~13:30","점심: 보말칼국수·해물","중문 인근","4인 약 5~6만원|e",""],
+   ["14:00~15:30","테디베어뮤지엄","정가 10,000원, 예매가 8,000원 표기","4인 약 3.2~4만원|e","teddy"],
+   ["15:45~17:00","천지연폭포","일몰(17:30) 전에 방문","입장 약 6천원|o","chun"],
+   ["17:30~19:30","저녁: 매일올레시장 + 갈치조림","동절기 시장은 20시 마감, 갈치조림은 비싼 편","4인 약 10~13만원|e","maeil"]
+  ],
+  places:["yeo","jusang","teddy","chun","maeil"]},
+ {n:3,color:"#e67f4c",date:"12/3(목)",title:"동부 성산 왕복",tag:"동부",
+  route:"중문 → 성산 → 중문",
+  sum:"이동이 가장 긴 날(왕복 약 2시간 20분)이고 비용도 가장 큽니다. 아이들이 힘들어하면 카멜리아힐·휴애리로 바꾸세요.",
+  cost:"약 28~33만원",
+  warn:["성산 해산물 점심 식당은 아직 정하지 못했습니다.","아쿠아플라넷 어린이·성인 요금은 미확인입니다. 연령 구분 없는 상품가(1인 약 2.7~2.8만원) 기준이면 4인 약 11만원대로 더 낮을 수 있습니다."],
+  tl:[
+   ["07:30~08:30","호텔 조식 후 출발","성산까지 약 1시간 10분","",""],
+   ["09:45~11:30","성산일출봉","왕복 약 1시간","4인 약 1.5만원|o","seong"],
+   ["11:45~13:00","점심: 성산 해산물","식당 후보 미확정 (백기해녀의집, 성산바다풍경은 미검증)","4인 약 6~8만원|e","seaf"],
+   ["13:30~15:30","아쿠아플라넷 제주","실내, 사전 예매 할인 확인","4인 약 13~15만원|e","aqua"],
+   ["15:45~16:45","섭지코지 산책","주차는 유료로 안내됨, 현장 확인","입장 무료","seop"],
+   ["17:00~18:30","중문 복귀","약 1시간 10분","",""],
+   ["19:00~20:30","저녁: 호텔 근처","피곤하면 간단히","4인 약 5~7만원|e",""]
+  ],
+  places:["seong","aqua","seop","seaf"]},
+ {n:4,color:"#6f86f5",date:"12/4(금)",title:"제주시 + 귀환",tag:"귀환",
+  route:"중문 → 제주시 → 공항",
+  sum:"오후 비행기라 오전까지 제주시에서 마무리합니다. 항공 시간이 당겨지면 도두봉을 생략하세요.",
+  cost:"약 8~10만원",
+  warn:["렌트카 반납 장소와 시간을 미리 확인하고, 출발 2시간 전에 공항에 도착하세요."],
+  tl:[
+   ["08:00~09:30","호텔 조식, 체크아웃","","",""],
+   ["10:00~11:00","제주시로 이동","약 50분","",""],
+   ["11:00~12:00","동문시장","기념품, 감귤 초콜릿","기념품 약 3~5만원|e","dong"],
+   ["12:00~13:00","점심: 자매국수","제주시 항골남길 46. 올래국수·우진해장국도 가능","4인 약 4~5만원|e","jamae"],
+   ["13:15~14:00","도두봉 무지개해안도로","짧은 산책, 사진","무료","dodu"],
+   ["14:00~14:30","렌트카 반납","주유 후 반납","",""],
+   ["14:30~","제주공항 수속 → 대구","출발 2시간 전 도착","",""]
+  ],
+  places:["dong","jamae","dodu"]}
+];
+
+var BUDGET = [
+ ["1~4일차 현지 지출 (식비·입장료·기념품)",78,95],
+ ["항공권 (대구-제주 왕복, 4인)",40,60],
+ ["렌트카 + 유류·주차",25,37],
+ ["호텔 3박 (중문)",45,70]
+];
+var TODO = ["항공권 예약 (12/1 오전 출발 · 12/4 오후 귀환)","중문 호텔 3박 (패밀리룸 또는 트윈 2실)","렌트카 (4인 탑승, 부스터 시트, 완전자차 포함 총액 확인)","아쿠아플라넷 등 입장권 사전 예매","인기 식당 대기·영업시간 확인"];
+
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function price(p){
+  if(!p) return "";
+  var a=p.split("|"), t=a[0], k=a[1];
+  var chip = k==="o" ? '<span class="chip ok">확인</span>' : k==="e" ? '<span class="chip est">추정</span>' : "";
+  return '<div class="p"><b>'+esc(t)+'</b> '+chip+'</div>';
+}
+function naver(q){return "https://map.naver.com/p/search/"+encodeURIComponent(q)}
+function kakao(q){return "https://map.kakao.com/?q="+encodeURIComponent(q)}
+function photos(q){return "https://www.google.com/search?tbm=isch&q="+encodeURIComponent(q)}
+
+function placeCard(id,order){
+  var p=PLACES[id];
+  var photo = p.img ? '<img src="img/'+p.img+'" alt="'+esc(p.name)+'" loading="lazy">' : '<div class="nophoto">사진 없음</div>';
+  var info = p.info.map(function(r){return '<dt>'+esc(r[0])+'</dt><dd>'+esc(r[1])+'</dd>'}).join("");
+  var links = '<a href="'+naver(p.q)+'" target="_blank" rel="noopener">네이버지도</a><a href="'+kakao(p.q)+'" target="_blank" rel="noopener">카카오맵</a><a href="'+photos(p.q)+'" target="_blank" rel="noopener">사진 더 보기</a>'+
+    p.links.map(function(l){return '<a href="'+l[1]+'" target="_blank" rel="noopener">'+esc(l[0])+'</a>'}).join("");
+  return '<article class="place" id="p-'+id+'">'+photo+'<div class="b"><h4>'+esc(p.name)+'</h4><p class="desc">'+esc(p.desc)+'</p><dl class="info">'+info+'</dl><div class="l">'+links+'</div>'+(p.credit?'<div class="credit">'+esc(p.credit)+'</div>':'')+'</div></article>';
+}
+
+function renderDay(i){
+  var d=DAYS[i];
+  var tl=d.tl.map(function(r){
+    var name = r[4] ? '<a href="#p-'+r[4]+'" data-p="'+r[4]+'">'+esc(r[1])+'</a>' : esc(r[1]);
+    return '<li><div class="t">'+esc(r[0])+'</div><div><div class="w">'+name+'</div>'+(r[2]?'<div class="d">'+esc(r[2])+'</div>':'')+price(r[3])+'</div></li>';
+  }).join("");
+  var warn = d.warn && d.warn.length ? '<div class="warnbox"><b>확인할 점</b><ul>'+d.warn.map(function(w){return '<li>'+esc(w)+'</li>'}).join("")+'</ul></div>' : "";
+  document.getElementById("day").innerHTML =
+    '<div class="dayhead"><h3>'+d.n+'일차 · '+d.date+' · '+esc(d.title)+'</h3><span class="chip" style="background:'+d.color+';color:#fff">'+d.tag+'</span></div>'+
+    '<p class="daysum">'+esc(d.sum)+'<br><b>'+esc(d.cost)+'</b> <span class="chip est">추정</span></p>'+warn+
+    '<div class="grid"><ul class="tl">'+tl+'</ul><div class="places">'+d.places.map(function(id){return placeCard(id)}).join("")+'</div></div>';
+  document.querySelectorAll(".tab").forEach(function(t,j){t.setAttribute("aria-selected", j===i?"true":"false")});
+  try{localStorage.setItem("jeju-day",String(i))}catch(e){}
+}
+
+(function init(){
+  document.getElementById("route").innerHTML = DAYS.map(function(d){
+    return '<div style="--c:'+d.color+'"><b>'+d.n+'일차 '+d.date+'</b><span>'+esc(d.route)+'</span></div>';
+  }).join("");
+  document.getElementById("tabs").innerHTML = DAYS.map(function(d,i){
+    return '<button class="tab" role="tab" type="button" data-i="'+i+'"><span class="n" style="background:'+d.color+'">'+d.n+'</span>'+d.n+'일차 '+d.date+'</button>';
+  }).join("");
+  document.getElementById("tabs").addEventListener("click",function(e){
+    var b=e.target.closest(".tab"); if(b) renderDay(+b.dataset.i);
+  });
+  document.getElementById("day").addEventListener("click",function(e){
+    var a=e.target.closest("a[data-p]"); if(!a) return;
+    e.preventDefault();
+    var el=document.getElementById("p-"+a.dataset.p); if(!el) return;
+    el.scrollIntoView({behavior:"smooth",block:"center"});
+    document.querySelectorAll(".place.hl").forEach(function(x){x.classList.remove("hl")});
+    el.classList.add("hl"); setTimeout(function(){el.classList.remove("hl")},1800);
+  });
+  var start=0; try{var s=parseInt(localStorage.getItem("jeju-day"),10); if(s>=0&&s<4) start=s}catch(e){}
+  renderDay(start);
+
+  var lo=0,hi=0;
+  var rows=BUDGET.map(function(b){lo+=b[1];hi+=b[2];return '<tr><td>'+esc(b[0])+' <span class="chip est">추정</span></td><td class="r">'+b[1]+' ~ '+b[2]+'만원</td></tr>'}).join("");
+  document.getElementById("btable").innerHTML='<tr><th>항목</th><th class="r">예상 비용</th></tr>'+rows+'<tr class="total"><td>합계 (목표 약 200만원)</td><td class="r">'+lo+' ~ '+hi+'만원</td></tr>';
+
+  var saved={}; try{saved=JSON.parse(localStorage.getItem("jeju-todo")||"{}")}catch(e){}
+  document.getElementById("check").innerHTML=TODO.map(function(t,i){
+    return '<li><label><input type="checkbox" data-i="'+i+'"'+(saved[i]?" checked":"")+'><span>'+esc(t)+'</span></label></li>';
+  }).join("");
+  document.getElementById("check").addEventListener("change",function(e){
+    saved[e.target.dataset.i]=e.target.checked;
+    try{localStorage.setItem("jeju-todo",JSON.stringify(saved))}catch(err){}
+  });
+
+  document.getElementById("theme").addEventListener("click",function(){
+    var r=document.documentElement, cur=r.getAttribute("data-theme");
+    if(!cur) cur = matchMedia("(prefers-color-scheme: dark)").matches ? "dark":"light";
+    var next = cur==="dark"?"light":"dark"; r.setAttribute("data-theme",next);
+    try{localStorage.setItem("jeju-theme",next)}catch(e){}
+  });
+  try{var th=localStorage.getItem("jeju-theme"); if(th) document.documentElement.setAttribute("data-theme",th)}catch(e){}
+})();
+</script>
+</body>
+</html>
